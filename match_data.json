@@ -2,18 +2,18 @@
   "team1": "PAKISTAN",
   "team2": "INDIA",
   "battingTeam": "PAKISTAN",
-  "score": "129/4",
-  "overs": "10.3 ov",
-  "runRate": "6.4",
+  "score": "123/4",
+  "overs": "11.2 ov",
+  "runRate": "7.0",
   "target": "195",
-  "requiredRate": "10.6",
-  "status": "Pakistan need 45 runs from 36 balls",
+  "requiredRate": "8.1",
+  "status": "Pakistan need 77 runs from 41 balls",
   "commentary": "What a thrilling contest! The pressure is building!",
   "recentBalls": [
+    "4",
     "0",
-    "2",
+    "1",
     "6",
-    "0",
-    "2"
+    "W"
   ]
 }
