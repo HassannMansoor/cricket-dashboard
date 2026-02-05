@@ -1,0 +1,13 @@
+{
+  "team1": "PAKISTAN",
+  "team2": "INDIA",
+  "battingTeam": "PAKISTAN",
+  "score": "145/3",
+  "overs": "18.2 ov",
+  "runRate": "7.9",
+  "target": "201",
+  "requiredRate": "8.5",
+  "status": "Pakistan need 56 runs from 36 balls",
+  "commentary": "What an incredible match we're witnessing!",
+  "recentBalls": ["4", "1", "W", "6", "2"]
+}
