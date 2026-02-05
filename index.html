@@ -139,6 +139,36 @@ CRICKET_API_KEY = None  # Add this line instead
 
 
 def update_website_api(data):
+def update_github_json(data):
+    """Update match_data.json on GitHub"""
+    import base64
+    
+    GITHUB_TOKEN = userdata.get('GITHUB_TOKEN')
+    REPO = "hassannmansoor/cricket-dashboard"
+    FILE_PATH = "match_data.json"
+    
+    url = f"https://api.github.com/repos/{REPO}/contents/{FILE_PATH}"
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+    
+    # Get current file SHA
+    response = requests.get(url, headers=headers)
+    sha = response.json()['sha']
+    
+    # Update file
+    content = base64.b64encode(json.dumps(data, indent=2).encode()).decode()
+    payload = {
+        "message": "Update cricket scores",
+        "content": content,
+        "sha": sha
+    }
+    
+    response = requests.put(url, headers=headers, json=payload)
+    if response.status_code == 200:
+        print("✅ GitHub updated!")
+        return True
+    else:
+        print(f"❌ GitHub update failed")
+        return False
     """
     Send data to your website API endpoint
     Your website should have an endpoint like: https://yourwebsite.com/api/update-cricket
@@ -252,7 +282,7 @@ def simple_stream_approach():
             print(f"💬 {data['commentary']}")
             
             # Update your website (if you have API endpoint)
-            # update_website_api(data)
+           update_github_json(data)
             
             # Create frame with text overlay (similar to before)
             create_frame_and_stream(data)
