@@ -14,7 +14,7 @@ import os
 # ==================== CONFIGURATION ====================
 
 # Your website URL where dashboard is hosted
-DASHBOARD_URL = "https://yourwebsite.com/cricket-dashboard.html"
+DASHBOARD_URL = "https://hassannmansoor.github.io/cricket-dashboard/"
 
 # API Keys
 CRICKET_API_KEY = userdata.get('CRICKET_API_KEY')
@@ -76,7 +76,9 @@ def parse_match_data(match):
     """Convert match data to dashboard format"""
     
     if not match:
-        # Demo data
+        # CRICKET_API_KEY = userdata.get('CRICKET_API_KEY')
+CRICKET_API_KEY = None  # Add this line instead
+# Demo data
         import random
         return {
             'team1': 'PAKISTAN',
